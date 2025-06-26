@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸르름 푸는 곳</title>
+</head>
+<link rel="stylesheet" href="css/vd.css">
+<body>
+    <header>
+        <h1><img src="images/logo.png" alt=""></h1>
+
+        <nav>
+            <ul class="gnb">
+                <li> <a href="#">영웅의 발자취</a></li>
+                <li> <a href="#">역사의 사건들</a></li>
+                <li> <a href="#">벚꽃 속 약속</a></li>
+                <li> <a href="#">다시 피어나다</a></li>
+                <li> <a href="#">함께 걷는 길</a></li>
+            </ul>
+        </nav>   
+    </header>
+    <div id="visual">
+        <div class="flowerl"></div>
+        <div class="flower2"></div>
+        <div class="flower3"></div>
+
+
+
+
+        <div class="playBtn">
+            <audio id="audio" src=
+            "music/우리 둘이 있으면 최강이잖아_ 💪🏻ㅣ주술회전 2기 OP 푸르름이 사는 곳 (Where our blue is) 가사 번역.mp4" controls></audio>
+            <img id="playBtn" src= "images/btn_play.png" alt="플레이">
+            <img id="pauseBtn" src= "images/btn_pause.png" alt="일시정지">
+        </div>
+
+        
+        <div class="text">
+            <ul>
+                <li>
+                    <span>지</span>
+                    <span>금</span>
+                    <span class="space">도</span>
+                    <span>푸</span>
+                    <span>름</span>
+                    <span class="space">은</span>
+                    <span>머</span>
+                    <span>물</span>
+                    <span class="space">러</span>
+                    <span>있</span>
+                    <span>어</span>
+                </li>
+                <li>
+                    <span>지</span>
+                    <span>금</span>
+                    <span class="space">도</span>
+                    <span>푸</span>
+                    <span class="space">른</span>
+                    <span>빛</span>
+                    <span class="space">은</span>
+                    <span>맑</span>
+                    <span class="space">아</span>
+                    <span>지</span>
+                    <span class="space">고</span>
+                    <span>있</span>
+                    <span class="space">어</span>
+                </li>
+                <li>
+                    <span>어</span>
+                    <span class="space">떤</span>
+                    <span>기</span>
+                    <span>도</span>
+                    <span class="space">도</span>
+                    <span>말</span>
+                    <span class="space">도</span>
+                </li>
+                <li>
+                    <span>가</span>
+                    <span>까</span>
+                    <span class="space">워</span>
+                    <span class="space">질</span>
+                    <span class="space">수</span>
+                    <span>있</span>
+                    <span>는</span>
+                    <span class="space">데</span>
+                    <span>닿</span>
+                    <span class="space">지</span>
+                    <span>못</span>
+                    <span>했</span>
+                    <span>어</span>
+                </li>
+            </ul>
+    </div> 
+    <script>
+  const audio = document.getElementById('audio')
+  const playBtn = document.getElementById('playBtn')
+  const pauseBtn = document.getElementById('pauseBtn')
+
+  // 플레이 버튼 클릭 시
+  playBtn.addEventListener('click', () => {
+    audio.play()
+    playBtn.style.display = 'none'
+    pauseBtn.style.display = 'inline'
+  })
+
+  // 일시중지 버튼 클릭 시
+  pauseBtn.addEventListener('click', () => {
+    audio.pause()
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+
+  // 오디오가 끝났을 때 플레이 버튼 보여주기
+  audio.addEventListener('ended', () => {
+    pauseBtn.style.display = 'none'
+    playBtn.style.display = 'inline'
+  })
+</script>
+</body>
+</html>
